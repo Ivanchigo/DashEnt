@@ -25,9 +25,7 @@ namespace DashEnt
         {
             InitializeComponent();
         }
-
-        DbMani obDatos = new DbMani();
-
+               
         private void cloTab_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown(-1);
@@ -54,12 +52,7 @@ namespace DashEnt
             addUat.ShowDialog();
                  
         }
-
-        private void MainWindow_Load(object sender, RoutedEventArgs e)
-        {
-            obDatos.consultar("select * from TabBitacora", "TabBitacora");
-            this.dataApp.ItemsSource = obDatos.ds.Tables["TabBitacora"];
-            
-        }
+           
+     
     }
 }
